@@ -183,7 +183,7 @@
 
 @media (max-width: 575px) {
   .u-section-2 .u-sheet-1 {
-    min-height: 869px;
+    min-height: 838px;
   }
 
   .u-section-2 .u-shape-1 {
@@ -215,6 +215,7 @@
     width: 116px;
     height: 116px;
     margin-top: -737px;
+    margin-bottom: 60px;
   }
 } .u-section-3 {
   background-image: none;
@@ -473,8 +474,12 @@
 }
 
 @media (max-width: 575px) {
+   .u-section-3 {
+    min-height: 1798px;
+  }
+
   .u-section-3 .u-text-1 {
-    margin-top: -124px;
+    margin-top: 4px;
     margin-left: 0;
     margin-right: 0;
   }
