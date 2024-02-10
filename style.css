@@ -23,21 +23,34 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #08F;
 }
 
 .image-gallery {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; /* Allows images to wrap on smaller screens */
+    /* Remove or modify flex-wrap if you always want all items in a single row */
+    flex-wrap: nowrap; /* Prevents wrapping */
     padding: 20px 0;
 }
 
+.image-gallery div {
+    width: 30%; /* Width of each image container */
+    height: auto; /* Adjust height to be auto to accommodate both image and text */
+    overflow: hidden; /* Keeps anything outside the container from showing */
+    display: flex;
+    flex-direction: column; /* Stacks flex items vertically */
+    justify-content: center; /* Centers items vertically, can be adjusted as needed */
+    align-items: center; /* Centers items horizontally */
+    margin: 10px; /* Adjust as needed */
+    text-align: center; /* Ensures text is centered below the image */
+}
+
 .image-gallery img {
-    max-width: 10%; /* Ensures image is not larger than its container */
-    height: auto; /* Maintains aspect ratio */
-    margin: 10px; /* Adds some space around images */
-    flex: 1 1 300px; /* Allows images to grow and shrink but not be smaller than 300px */
+    height: 200px; /* Fixed height for images */
+    width: auto; /* Width auto-adjusts to maintain aspect ratio */
+    object-fit: cover; /* Ensures image covers the designated area, cropping as needed */
+    margin-bottom: 10px; /* Adds some space between the image and the text */
 }
 
 footer {
@@ -74,7 +87,7 @@ footer {
 }
 
 .member-photo {
-    width: 100%;
+    width: 30%;
     height: auto;
     border-radius: 50%;
     object-fit: cover;
