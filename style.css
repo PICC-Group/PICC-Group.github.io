@@ -6,9 +6,28 @@ body, html {
 }
 
 header {
-    background-color: #f0f0f0;
-    padding: 20px;
     text-align: center;
+
+    display: flex; /* Enables Flexbox layout */
+    justify-content: space-between; /* Spreads out the children (content and image) */
+    align-items: stretch; /* Stretches children to match the header's height */
+    background-color: #9dcee4; /* Your existing background */
+    padding-top: 20px; /* Your existing padding */
+}
+
+.header-content {
+    flex: 1; /* Allows the div to grow and occupy available space, pushing the image to the right */
+    display: flex; /* Enables Flexbox within the content div */
+    flex-direction: column; /* Stacks items vertically */
+    justify-content: center; /* Centers the items vertically within the content div */
+    align-items: center; /* Centers items horizontally, adjust if your design requires a different alignment */
+    text-align: center;
+    padding-left: 5%;
+}
+
+.header-content h1 {
+    padding: 0;
+    margin: 0;
 }
 
 nav ul {
@@ -23,7 +42,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #08F;
+    color: rgb(0, 0, 0);
 }
 
 .image-gallery {
@@ -54,7 +73,7 @@ nav ul li a {
 }
 
 footer {
-    background-color: #f0f0f0;
+    background-color: #9dcee4;
     text-align: center;
     padding: 10px;
     position: fixed;
@@ -75,7 +94,8 @@ footer {
     padding: 20px;
     width: calc(33.333% - 20px);
     text-align: center;
-    background-color: #fff;
+    background-color: #b3d4e387;
+    border-radius: 10%;
 }
 
 .member-card h3 {
@@ -93,6 +113,11 @@ footer {
     object-fit: cover;
 }
 
+.link-logo {
+    max-height: 18px;
+    width: auto;
+}
+
 @media (max-width: 768px) {
     .member-card {
         width: calc(50% - 20px);
@@ -107,5 +132,32 @@ footer {
 
 .spacer {
     height: 150px;
-    margin: 50px;
+    margin-top: 150px;
+    margin-bottom: 60px;
+    background-image: url('images/lu.jpeg');
+    background-position: center center; /* Centers the background image */
+    background-size: cover; /* Ensures the image covers the full area of the element */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding: 40px;
+}
+
+.lu-image {
+    height: auto; /* Adjust height to maintain aspect ratio */
+    align-self: flex-end; /* Aligns the image to the right */
+    margin-left: auto; /* Pushes the image to the far right */
+    /* Set a specific width or max-width if necessary */
+    max-height: 100px;
+}
+
+.blog {
+    width: 40%; /* Sets the width of the blog container to 50% of its parent */
+    margin: 0 auto; /* Centers the container within its parent element */
+    display: block;
+}
+
+.blog-container {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
