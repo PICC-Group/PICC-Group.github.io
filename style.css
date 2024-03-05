@@ -161,3 +161,16 @@ footer {
     display: flex;
     align-items: center;
 }
+.gif-container {
+    display: flex; /* Use flexbox to center the child elements */
+    justify-content: center; /* Centers the child elements horizontally */
+    align-items: center; /* Centers the child elements vertically, if needed */
+}
+
+.gif-container img {
+    max-height: 400px; /* Adjust this value to make the GIF larger than the gallery images */
+    width: auto; /* Adjusts the width to maintain the aspect ratio */
+    object-fit: cover; /* Adjusts the cover behavior, if necessary */
+    /* Removed display: block; and margin: 20px auto; as flexbox is now handling centering */
+    padding-left: 10%;
+}
