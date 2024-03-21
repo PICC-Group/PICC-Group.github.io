@@ -67,12 +67,12 @@
        id="text1"
        style="font-size:96px;white-space:pre;shape-inside:url(#rect1);display:inline;fill:#1a1a1a;fill-opacity:1"
        inkscape:label="text1"
-       transform="translate(-3.5432987,5.7012294)"><tspan
+       transform="matrix(1.0942893,0,0,1.0737369,-7.2192921,-7.0288777)"><tspan
          x="31.158203"
-         y="170.65223"
-         id="tspan3"><tspan
-           style="font-weight:bold;font-family:'Microsoft YaHei UI';-inkscape-font-specification:'Microsoft YaHei UI Bold'"
-           id="tspan2">PI</tspan></tspan></text>
+         y="172.64229"
+         id="tspan2"><tspan
+           style="font-weight:bold;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic Bold'"
+           id="tspan1">PI</tspan></tspan></text>
     <path
        d="m 167.07055,104.31508 a 37,37 0 0 0 -37,37 37,37 0 0 0 37,37 37,37 0 0 0 23.25,-8.34961 l -8.63672,-11.02148 a 22.5,22.5 0 0 1 -14.08398,5.09375 22.5,22.5 0 0 1 -22.5,-22.5 22.5,22.5 0 0 1 22.5,-22.5 22.5,22.5 0 0 1 15.0625,5.79687 l 9.4375,-10.75781 a 37,37 0 0 0 -25.0293,-9.76172 z"
        id="path4"
@@ -99,7 +99,8 @@
          sodipodi:role="line"
          id="tspan6"
          x="94.061195"
-         y="211.00217">GROUP</tspan></text>
+         y="211.00217"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic Bold'">GROUP</tspan></text>
     <rect
        style="fill:#1a1a1a"
        id="rect6"
