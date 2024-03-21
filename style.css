@@ -11,8 +11,10 @@ header {
     display: flex; /* Enables Flexbox layout */
     justify-content: space-between; /* Spreads out the children (content and image) */
     align-items: stretch; /* Stretches children to match the header's height */
-    background-color: #9dcee4; /* Your existing background */
+    background-color: #9cf0ff; /* Your existing background */
     padding-top: 20px; /* Your existing padding */
+    padding-bottom: 5px;
+
 }
 
 .header-content {
@@ -22,7 +24,8 @@ header {
     justify-content: center; /* Centers the items vertically within the content div */
     align-items: center; /* Centers items horizontally, adjust if your design requires a different alignment */
     text-align: center;
-    padding-left: 5%;
+    padding-left: 8%;
+
 }
 
 .header-content h1 {
@@ -43,6 +46,16 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: rgb(0, 0, 0);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Change color on hover */
 }
 
 .image-gallery {
@@ -73,7 +86,7 @@ nav ul li a {
 }
 
 footer {
-    background-color: #9dcee4;
+    background-color: #9cf0ff;
     text-align: center;
     padding: 10px;
     position: fixed;
@@ -141,12 +154,22 @@ footer {
     padding: 40px;
 }
 
+.logo-svg {
+    width: 230px; /* Set the width of the SVG */
+    height: auto; /* Maintain aspect ratio */
+    fill: #007bff; /* Set fill color */
+    margin-bottom: 10px; /* Add some space between the logo and the navigation */
+}
+
 .lu-image {
     height: auto; /* Adjust height to maintain aspect ratio */
     align-self: flex-end; /* Aligns the image to the right */
     margin-left: auto; /* Pushes the image to the far right */
+    
     /* Set a specific width or max-width if necessary */
     max-height: 100px;
+    margin-bottom: 30px;
+    margin-right: 30px;
 }
 
 .blog {
