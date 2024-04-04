@@ -197,3 +197,8 @@ footer {
     /* Removed display: block; and margin: 20px auto; as flexbox is now handling centering */
     padding-left: 10%;
 }
+
+.blogpic {
+    max-width: 100%;
+    margin-top: 3%;
+}
