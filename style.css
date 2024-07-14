@@ -1,31 +1,31 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     text-align: center;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
 }
 
 header {
     text-align: center;
-
-    display: flex; /* Enables Flexbox layout */
-    justify-content: space-between; /* Spreads out the children (content and image) */
-    align-items: stretch; /* Stretches children to match the header's height */
-    background-color: #9cf0ff; /* Your existing background */
-    padding-top: 20px; /* Your existing padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: #9cf0ff;
+    padding-top: 20px;
     padding-bottom: 5px;
-
 }
 
 .header-content {
-    flex: 1; /* Allows the div to grow and occupy available space, pushing the image to the right */
-    display: flex; /* Enables Flexbox within the content div */
-    flex-direction: column; /* Stacks items vertically */
-    justify-content: center; /* Centers the items vertically within the content div */
-    align-items: center; /* Centers items horizontally, adjust if your design requires a different alignment */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding-left: 8%;
-
 }
 
 .header-content h1 {
@@ -46,43 +46,117 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: rgb(0, 0, 0);
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    transition: color 0.3s ease; /* Smooth transition for color change */
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #007bff; /* Change color on hover */
+    color: #007bff;
 }
 
-.image-gallery {
+.video-container {
+    text-align: center;
+    margin-bottom: 0;
+    /* Reduced margin to 0 */
+}
+
+.video-container h2 {
+    margin-bottom: 10px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    /* Set a max-width for larger screens */
+    height: 0;
+    padding-bottom: 30%;
+    /* 16:9 aspect ratio */
+    margin: 0 auto;
+    /* Center the video */
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (min-width: 768px) {
+    .video-wrapper {
+        max-width: 50%;
+        /* Set max-width to 50% on larger screens */
+    }
+}
+
+.image-gallery-large {
     display: flex;
-    justify-content: space-around;
-    /* Remove or modify flex-wrap if you always want all items in a single row */
-    flex-wrap: nowrap; /* Prevents wrapping */
+    justify-content: center;
+    gap: 10px;
     padding: 20px 0;
+    flex-wrap: wrap;
+    /* Ensure images wrap on smaller screens */
 }
 
-.image-gallery div {
-    width: 30%; /* Width of each image container */
-    height: auto; /* Adjust height to be auto to accommodate both image and text */
-    overflow: hidden; /* Keeps anything outside the container from showing */
+.image-gallery-large div {
+    width: 48%;
+    height: auto;
+    overflow: hidden;
     display: flex;
-    flex-direction: column; /* Stacks flex items vertically */
-    justify-content: center; /* Centers items vertically, can be adjusted as needed */
-    align-items: center; /* Centers items horizontally */
-    margin: 10px; /* Adjust as needed */
-    text-align: center; /* Ensures text is centered below the image */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.image-gallery img {
-    height: 200px; /* Fixed height for images */
-    width: auto; /* Width auto-adjusts to maintain aspect ratio */
-    object-fit: cover; /* Ensures image covers the designated area, cropping as needed */
-    margin-bottom: 10px; /* Adds some space between the image and the text */
+.image-gallery-large img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    /* Added space above the GIF */
+}
+
+.gif-container img {
+    max-height: 400px;
+    width: auto;
+    object-fit: cover;
+}
+
+.pdf-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    /* Increased space between the PDF containers */
+    padding: 10px 0;
+    /* Reduced padding to 10px on top and bottom */
+    margin: 0 10px;
+    /* Space on outer edges of the gallery */
+}
+
+.pdf-gallery div {
+    flex: 1;
+    /* Make sure each PDF takes up an equal amount of space */
+    max-width: calc(33.333% - 20px);
+    /* Ensures three PDFs fit side by side and account for gap */
+    padding: 0 10px;
+    /* Space on the inner sides of the PDFs */
+    box-sizing: border-box;
+    /* Include padding in the element's total width and height */
+}
+
+.pdf-gallery iframe {
+    width: 100%;
+    height: 600px;
 }
 
 footer {
@@ -135,6 +209,17 @@ footer {
     .member-card {
         width: calc(50% - 20px);
     }
+
+    .pdf-gallery {
+        flex-direction: column;
+        /* Stack PDFs vertically on smaller screens */
+    }
+
+    .pdf-gallery div {
+        max-width: 100%;
+        padding: 10px 0;
+        /* Adjust padding for vertical stacking */
+    }
 }
 
 @media (max-width: 480px) {
@@ -148,33 +233,31 @@ footer {
     margin-top: 150px;
     margin-bottom: 60px;
     background-image: url('images/lu.jpeg');
-    background-position: center center; /* Centers the background image */
-    background-size: cover; /* Ensures the image covers the full area of the element */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 40px;
 }
 
 .logo-svg {
-    width: 230px; /* Set the width of the SVG */
-    height: auto; /* Maintain aspect ratio */
-    fill: #007bff; /* Set fill color */
-    margin-bottom: 10px; /* Add some space between the logo and the navigation */
+    width: 230px;
+    height: auto;
+    fill: #007bff;
+    margin-bottom: 10px;
 }
 
 .lu-image {
-    height: auto; /* Adjust height to maintain aspect ratio */
-    align-self: flex-end; /* Aligns the image to the right */
-    margin-left: auto; /* Pushes the image to the far right */
-    
-    /* Set a specific width or max-width if necessary */
+    height: auto;
+    align-self: flex-end;
+    margin-left: auto;
     max-height: 100px;
     margin-bottom: 30px;
     margin-right: 30px;
 }
 
 .blog {
-    width: 40%; /* Sets the width of the blog container to 50% of its parent */
-    margin: 0 auto; /* Centers the container within its parent element */
+    width: 40%;
+    margin: 0 auto;
     display: block;
 }
 
@@ -183,19 +266,6 @@ footer {
     width: 100%;
     display: flex;
     align-items: center;
-}
-.gif-container {
-    display: flex; /* Use flexbox to center the child elements */
-    justify-content: center; /* Centers the child elements horizontally */
-    align-items: center; /* Centers the child elements vertically, if needed */
-}
-
-.gif-container img {
-    max-height: 400px; /* Adjust this value to make the GIF larger than the gallery images */
-    width: auto; /* Adjusts the width to maintain the aspect ratio */
-    object-fit: cover; /* Adjusts the cover behavior, if necessary */
-    /* Removed display: block; and margin: 20px auto; as flexbox is now handling centering */
-    padding-left: 10%;
 }
 
 .blogpic {
