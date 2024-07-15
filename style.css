@@ -137,7 +137,7 @@ nav ul li a:hover {
     justify-content: space-between;
     gap: 20px;
     /* Increased space between the PDF containers */
-    padding: 10px 0;
+    padding: 100px 0;
     /* Reduced padding to 10px on top and bottom */
     margin: 0 10px;
     /* Space on outer edges of the gallery */
@@ -157,6 +157,49 @@ nav ul li a:hover {
 .pdf-gallery iframe {
     width: 100%;
     height: 600px;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* Space between the pictures */
+    padding: 20px 0;
+    flex-wrap: wrap;
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+.image-container {
+    flex: 1;
+    max-width: 48%;
+    box-sizing: border-box;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .image-gallery {
+        flex-direction: column;
+    }
+
+    .image-container {
+        max-width: 100%;
+        margin-bottom: 20px;
+        /* Space between pictures on small screens */
+    }
+}
+
+.overview-title {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 footer {
@@ -271,4 +314,31 @@ footer {
 .blogpic {
     max-width: 100%;
     margin-top: 3%;
+}
+
+.gif-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 0;
+    flex-wrap: wrap;
+    /* Ensure images wrap on smaller screens */
+}
+
+.gif-gallery div {
+    width: 48%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.gif-gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
 }
