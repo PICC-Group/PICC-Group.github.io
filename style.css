@@ -137,7 +137,7 @@ nav ul li a:hover {
     justify-content: space-between;
     gap: 20px;
     /* Increased space between the PDF containers */
-    padding: 100px 0;
+    padding: 20px 0;
     /* Reduced padding to 10px on top and bottom */
     margin: 0 10px;
     /* Space on outer edges of the gallery */
@@ -314,6 +314,18 @@ footer {
 .blogpic {
     max-width: 100%;
     margin-top: 3%;
+}
+
+.text-container {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .text-container {
+        width: 50%;
+    }
 }
 
 .gif-gallery {
